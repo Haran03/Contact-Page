@@ -1,38 +1,377 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  background-color: darkslategray;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: end; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  flex-wrap: wrap; /* Wrap items on smaller screens */
+}
+
+.navbar .logo {
+  padding-right: 1150px;
+}
+
+.navbar li {
+  display: flex;
+  align-items: center;
+  margin: 0 10px; /* Adjust margin as needed */
+}
+
+.navbar li img {
+  min-height: 80px;
+  max-width: 80px;
+  background-color: white;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: #111;
+}
+
 .App {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+.banner-container {
+  width: 100%;
+  overflow: hidden;
+}
+.banner {
+  background-color: #f0f0f0;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.contact-form-container {
+  flex: 1;
+  margin-right: 20px;
+  max-width: 600px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.contact-form label {
+  margin-bottom: 10px;
+  color: black;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 90%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 2px solid black;
+  border-radius: 12px;
+  color: black;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: gray; /* Change this color as needed */
+}
+
+.contact-form .input-error {
+  border-color: rgb(221, 25, 25);
+}
+
+.contact-form button {
+  width: 150px;
+  height: 50px;
+  background-color: orangered;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: rgb(255, 102, 46);
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: -15px;
+  margin-bottom: 10px;
+}
+
+.contact-info {
+  flex: 1;
+  background-color: azure;
+  padding: 20px;
+}
+
+.contact-info h3 {
+  margin-top: 0;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+.para {
+  text-align: justify;
+}
+
+.contact-info {
+  flex: 1;
+  background-color: #f0f0f0;
+  padding: 20px;
+  min-width: 300px;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+.contact-info h1 {
+  margin-top: 0;
+}
+
+.contact-info .para {
+  margin-bottom: 20px;
+}
+
+.contact-info .info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contact-info .info-item img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.contact-info .follow img {
+  height: 24px;
+  width: 24px;
+  padding: 5px;
+}
+
+.information img {
+  height: 24px;
+  width: 24px;
+  margin-right: 10px;
+}
+
+.information .info-item {
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  background-color: darkslategrey;
+  color: #fff;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-bottom: 5px solid slategray;
+  border-radius: 8px;
+}
+
+.company-info,
+.quick-links,
+.services {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.company-info img {
+  height: 180px;
+  width: 180px;
+}
+
+.company-info p {
+  margin: 5px 0;
+}
+
+.quick-links ul,
+.services ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.quick-links a {
+  text-decoration: none;
+  color: #fff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.information a {
+  text-decoration: none;
+  color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.quick-links li img,
+.services li img {
+  height: 18px;
+  width: 18px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.quick-links li,
+.services li {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.quick-links ul li,
+.services ul li {
+  margin-bottom: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.company-info .follow img {
+  height: 24px;
+  width: 24px;
+  padding: 5px;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .navbar .logo {
+    padding-right: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  .contact {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .footer-content {
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar li {
+    margin: 0 5px;
+  }
+  .navbar li a {
+    padding: 10px 12px;
+  }
+
+  .contact {
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .contact-form-container,
+  .contact-info {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+  }
+
+  .footer-content > div {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar ul {
+    flex-direction: column;
+  }
+  .navbar li {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar li a {
+    width: 100%;
+  }
+
+  .footer-content {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .banner {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    width: 100%;
+    height: auto;
   }
 }
