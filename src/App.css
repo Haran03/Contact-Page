@@ -283,8 +283,18 @@ footer {
   text-align: center;
   margin-top: 20px;
 }
+@media (max-width: 1835px) and (min-width: 1347px) {
+  .navbar .logo {
+    padding-right: 300px;
+  }
 
-/* Media Queries */
+  .navbar ul {
+    justify-content:space-around;
+  }
+}
+
+
+
 @media (max-width: 1024px) {
   .navbar .logo {
     padding-right: 0;
