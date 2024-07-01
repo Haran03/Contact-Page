@@ -1,10 +1,10 @@
-
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
+
 /*CONTACT FORM*/
 .navbar {
   width: 100%;
@@ -28,7 +28,6 @@ body {
   align-items: center;
   flex-wrap: wrap;
   margin-left: auto; /* Push the items to the right */
-
 }
 
 .nav-menu {
@@ -38,8 +37,6 @@ body {
 .nav-menu.open {
   display: block;
 }
-
-
 
 .navbar li {
   display: flex;
@@ -86,51 +83,6 @@ body {
   background-color: #111;
 }
 
-@media (max-width: 580px) {
-  .navbar-container {
-    justify-content: flex-start;
-    align-items: center;
-    height:60px
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    display: none;
-    width: 70%; /* Adjust width as needed */
-    position: fixed;
-    top: 0;
-    right: -100%; /* Hide offscreen initially */
-    height: 100%;
-    background-color: darkslategray;
-    transition: right 0.3s ease-in-out;
-    z-index: 999; /* Ensure it is above other elements */
-  }
-
-  .nav-menu.open {
-    right: 0; /* Slide in from the left */
-  }
-
-  .hamburger {
-    display: flex;
-    align-items: end;
-    position: absolute;
-    right: 20px; /* Adjust spacing from the right */
-    top: 10px; /* Align vertically */
-  }
-
-  .navbar li {
-    width: 100%;
-    text-align:left;
-    margin: 0;
-  }
-
-  .navbar li a {
-    width: 100%;
-   
-  }
- 
-}
-
 .App {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -142,17 +94,13 @@ body {
   padding: 20px;
   background-color: #f0f0f0;
 }
-/* .banner-container {
-  width: 100%;
-  overflow: hidden;
-} */
+
 .banner {
   background-color: #f0f0f0;
   display: block;
   width: 100%;
   height: 100vh;
   object-fit: cover;
-  
 }
 
 /* General adjustments for better responsiveness */
@@ -248,7 +196,6 @@ body {
   flex: 1;
   background-color: #f0f0f0;
   padding: 20px;
-  
 }
 
 .contact-info p {
@@ -280,9 +227,6 @@ body {
   width: 24px;
   padding: 5px;
 }
-
-
-
 
 .information img {
   height: 24px;
@@ -323,7 +267,6 @@ footer {
   max-height: 150px;
   max-width: 150px;
 }
-
 
 .company-info p {
   margin: 5px 0;
@@ -373,17 +316,17 @@ footer {
   text-align: center;
   margin-top: 20px;
 }
+
+/* Media Queries */
 @media (max-width: 1835px) and (min-width: 1047px) {
   .navbar .logo {
-    padding-right: 50px
+    padding-right: 50px;
   }
 
   .navbar ul {
-    justify-content:flex-end;
+    justify-content: flex-end;
   }
 }
-
-
 
 @media (max-width: 1024px) {
   .navbar .logo {
@@ -401,12 +344,18 @@ footer {
     display: flex;
     padding: 5px;
   }
+
+  .banner {
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media (max-width: 768px) {
   .navbar li {
     margin: 0 5px;
   }
+
   .navbar li a {
     padding: 10px 12px;
   }
@@ -434,20 +383,55 @@ footer {
     margin-bottom: 20px;
     width: 100%;
   }
+
   .company-info img {
     max-height: 120px;
     max-width: 120px;
   }
+
+  .banner {
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media (max-width: 580px) {
+  .navbar-container {
+    justify-content: flex-start;
+    align-items: center;
+    height: 60px;
+  }
+
   .navbar ul {
     flex-direction: column;
+    display: none;
+    width: 70%; /* Adjust width as needed */
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hide offscreen initially */
+    height: 100%;
+    background-color: darkslategray;
+    transition: right 0.3s ease-in-out;
+    z-index: 999; /* Ensure it is above other elements */
   }
+
+  .nav-menu.open {
+    right: 0; /* Slide in from the left */
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: end;
+    position: absolute;
+    right: 20px; /* Adjust spacing from the right */
+    top: 10px; /* Align vertically */
+  }
+
   .navbar li {
     width: 100%;
     text-align: center;
   }
+
   .navbar li a {
     width: 100%;
   }
@@ -457,24 +441,10 @@ footer {
     padding-right: 10px;
     display: flex;
   }
+
   .company-info img {
     max-height: 100px;
     max-width: 100px;
-  }
-}
-
-
-@media (max-width: 1024px) {
-  .banner {
-    width: 100%;
-    height: auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .banner {
-    width: 100%;
-    height: auto;
   }
 }
 
@@ -485,9 +455,8 @@ footer {
   }
 }
 
-
 @media (max-width: 400px) {
-  .contact, {
+  .contact {
     flex-direction: column;
     padding-left: 10px;
     padding-right: 10px;
@@ -509,4 +478,4 @@ footer {
   }
 }
 
-/*CONTACT FORM */
+/*CONTACT FORM*/
