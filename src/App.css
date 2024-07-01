@@ -1,13 +1,22 @@
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
-
+/*CONTACT FORM*/
 .navbar {
   width: 100%;
   background-color: darkslategray;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative;
 }
 
 .navbar ul {
@@ -15,19 +24,27 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: end; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
-  flex-wrap: wrap; /* Wrap items on smaller screens */
+  justify-content: end;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: auto; /* Push the items to the right */
+
 }
 
-.navbar .logo {
-  padding-right: 1150px;
+.nav-menu {
+  display: flex;
 }
+
+.nav-menu.open {
+  display: block;
+}
+
+
 
 .navbar li {
   display: flex;
   align-items: center;
-  margin: 0 10px; /* Adjust margin as needed */
+  margin: 0 10px;
 }
 
 .navbar li img {
@@ -48,6 +65,72 @@ body {
   background-color: #111;
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1000; /* Ensure it is above other elements */
+  align-items: flex-end;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+  align-items: flex-end;
+}
+
+.bar.open {
+  background-color: #111;
+}
+
+@media (max-width: 580px) {
+  .navbar-container {
+    justify-content: flex-start;
+    align-items: center;
+    height:60px
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    display: none;
+    width: 70%; /* Adjust width as needed */
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hide offscreen initially */
+    height: 100%;
+    background-color: darkslategray;
+    transition: right 0.3s ease-in-out;
+    z-index: 999; /* Ensure it is above other elements */
+  }
+
+  .nav-menu.open {
+    right: 0; /* Slide in from the left */
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: end;
+    position: absolute;
+    right: 20px; /* Adjust spacing from the right */
+    top: 10px; /* Align vertically */
+  }
+
+  .navbar li {
+    width: 100%;
+    text-align:left;
+    margin: 0;
+  }
+
+  .navbar li a {
+    width: 100%;
+   
+  }
+ 
+}
+
 .App {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -59,17 +142,20 @@ body {
   padding: 20px;
   background-color: #f0f0f0;
 }
-.banner-container {
+/* .banner-container {
   width: 100%;
   overflow: hidden;
-}
+} */
 .banner {
   background-color: #f0f0f0;
   display: block;
   width: 100%;
-  height: auto;
+  height: 100vh;
+  object-fit: cover;
+  
 }
 
+/* General adjustments for better responsiveness */
 .contact {
   display: flex;
   justify-content: space-between;
@@ -162,7 +248,7 @@ body {
   flex: 1;
   background-color: #f0f0f0;
   padding: 20px;
-  min-width: 300px;
+  
 }
 
 .contact-info p {
@@ -194,6 +280,9 @@ body {
   width: 24px;
   padding: 5px;
 }
+
+
+
 
 .information img {
   height: 24px;
@@ -231,9 +320,10 @@ footer {
 }
 
 .company-info img {
-  height: 180px;
-  width: 180px;
+  max-height: 150px;
+  max-width: 150px;
 }
+
 
 .company-info p {
   margin: 5px 0;
@@ -283,13 +373,13 @@ footer {
   text-align: center;
   margin-top: 20px;
 }
-@media (max-width: 1835px) and (min-width: 1347px) {
+@media (max-width: 1835px) and (min-width: 1047px) {
   .navbar .logo {
-    padding-right: 300px;
+    padding-right: 50px
   }
 
   .navbar ul {
-    justify-content:space-around;
+    justify-content:flex-end;
   }
 }
 
@@ -309,6 +399,7 @@ footer {
     padding-left: 100px;
     padding-right: 100px;
     display: flex;
+    padding: 5px;
   }
 }
 
@@ -329,7 +420,7 @@ footer {
   .contact-form-container,
   .contact-info {
     margin-right: 0;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
 
   .footer-content {
@@ -343,9 +434,13 @@ footer {
     margin-bottom: 20px;
     width: 100%;
   }
+  .company-info img {
+    max-height: 120px;
+    max-width: 120px;
+  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 580px) {
   .navbar ul {
     flex-direction: column;
   }
@@ -361,6 +456,10 @@ footer {
     padding-left: 10px;
     padding-right: 10px;
     display: flex;
+  }
+  .company-info img {
+    max-height: 100px;
+    max-width: 100px;
   }
 }
 
@@ -385,3 +484,29 @@ footer {
     height: auto;
   }
 }
+
+
+@media (max-width: 400px) {
+  .contact, {
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .contact-form-container,
+  .contact-info {
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .contact-form-container {
+    padding: 0;
+  }
+
+  .contact-info {
+    padding: 10px;
+  }
+}
+
+/*CONTACT FORM */

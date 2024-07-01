@@ -11,7 +11,7 @@ function App() {
       <NavBar />
       
         <div className="banner-container">
-          <img src="contact1.jpg" className="banner"/>
+          <img src="contact.jpg" className="banner"/>
         </div>
       <div className="container">
         <ContactForm />
